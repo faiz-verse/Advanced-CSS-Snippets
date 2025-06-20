@@ -1,5 +1,7 @@
 :root {
     --box-color: rgba(0, 255, 255, 0.5);
+    --rotate-speed: 30s;
+    --ball-speed: 1.5s;
 }
 
 body {
@@ -21,6 +23,13 @@ body {
 #scene {
     position: relative;
     transform-style: preserve-3d;
+    animation: scene-rotate var(--rotate-speed) linear infinite;
+}
+
+@keyframes scene-rotate {
+    to {
+        transform: rotateY(360deg);
+    }
 }
 
 #floor {
@@ -46,6 +55,22 @@ body {
     left: -.5em;
 
     background-image: radial-gradient(circle at top, lightblue, 70%, black);
+    animation:
+        scene-rotate var(--rotate-speed) linear infinite reverse,
+        ball-bounce var(--ball-speed) ease-out infinite;
+}
+
+@keyframes ball-bounce {
+
+    0%,
+    100% {
+        top: -2em;
+    }
+
+    50% {
+        top: -3.5em;
+        animation-timing-function: ease-in;
+    }
 }
 
 #box .side.top .ball-shadow {
@@ -54,7 +79,23 @@ body {
     position: absolute;
     top: calc(.5em);
     left: calc(.5em);
-    background-image: radial-gradient(black, transparent 60%);
+    background-image: radial-gradient(black, transparent 70%);
+    animation: ball-shadow var(--ball-speed) ease-out infinite;
+}
+
+@keyframes ball-shadow {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.2);
+        opacity: 0.5;
+        animation-timing-function: ease-in;
+    }
 }
 
 #box {
@@ -67,11 +108,12 @@ body {
     left: -1em;
 
     transform-style: preserve-3d;
+    transform-origin: bottom;
 }
 
 #box .side {
-    height: 2em;
-    width: 2em;
+    height: 100%;
+    width: 100%;
     position: absolute;
     background: var(--box-color);
     box-shadow: 0 0 0.5em #000a inset;

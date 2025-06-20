@@ -13,8 +13,7 @@ body {
     justify-content: center;
     background: black;
 
-    font-size: 75px;
-    /* to use em to change everything based on font size*/
+    font-size: 75px; /* to use em to change everything based on font size*/
 
     perspective: 10em;
     perspective-origin: 50% calc(50% - 2.5em);

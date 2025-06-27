@@ -16,7 +16,6 @@ body {
 #scene {
   position: relative;
   transform-style: preserve-3d;
-  transform-origin: center;
   animation: auto-rotate 35s linear infinite;
 }
 @keyframes auto-rotate {
@@ -59,40 +58,36 @@ body {
   height: 150px;
   width: 150px;
   position: absolute;
+  background: #e0ad6b;
+  box-shadow: 0 0 20px #ffcb79 inset;
 }
 
 .side.top {
-  background-color: rgba(255, 255, 0, 0.6);
-  transform: translateZ(200px);
+  transform: translateZ(155px);
   transform-style: preserve-3d;
-  scale: 1.1;
+  scale: 1.07;
 }
 
 .side.bottom {
-  background-color: rgba(0, 255, 242, 0.6);
   transform: translateZ(0px);
 }
 
 .side.left {
-  background-color: rgba(255, 145, 0, 0.6);
   transform-origin: right;
   transform: translateX(-150px) rotateY(90deg);
 }
 
 .side.right {
-  background-color: rgba(0, 255, 21, 0.6);
   transform-origin: left;
   transform: translateX(150px) rotateY(-90deg);
 }
 
 .side.back {
-  background-color: rgba(255, 0, 0, 0.6);
   transform-origin: top;
   transform: translateY(0px) rotateX(90deg);
 }
 
 .side.front {
-  background-color: rgba(195, 0, 255, 0.6);
   transform-origin: top;
   transform: translateY(150px) rotateX(90deg);
 }
@@ -100,6 +95,8 @@ body {
 .top-side {
   position: absolute;
   background: inherit;
+  box-shadow: 0 0 5px cyan inset;
+  background: rgba(0, 255, 255, 0.1);
 }
 
 .top-side.top-left {

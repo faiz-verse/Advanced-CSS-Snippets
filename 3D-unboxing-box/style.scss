@@ -51,10 +51,6 @@ body {
     transform: translate(-50%, -50%) rotateX(90deg);
 }
 
-#scene .scene-input:checked {
-    background: red;
-}
-
 #box {
     height: 150px;
     width: 150px;
@@ -87,6 +83,28 @@ body {
     transform: translateZ(155px);
     transform-style: preserve-3d;
     scale: 1.07;
+
+    animation: remove-top 2.8s cubic-bezier(0.25, 0.8, 0.3, 1) forwards;
+
+    animation-play-state: paused;
+
+    @keyframes remove-top {
+        20% {
+            transform: translateZ(190px);
+        }
+
+        40% {
+            transform: translateZ(190px) translateX(75%);
+        }
+
+        60% {
+            transform-origin: 25% 50%;
+        }
+
+        100% {
+            transform: translateZ(80px) translateX(75%) rotateY(80deg);
+        }
+    }
 }
 
 .side.bottom {
@@ -196,8 +214,22 @@ body {
     width: 110px;
     position: absolute;
     left: calc(50% - 55px);
-    transform: translateZ(250px) rotateX(90deg) rotateZ(180deg);
+    top: -20%;
+
     transform-style: preserve-3d;
+
+    animation: show-letter 2s ease-in forwards 1.5s;
+    animation-play-state: paused;
+
+    @keyframes show-letter {
+        50% {
+            transform: translateZ(125px) rotateX(0deg) rotateZ(180deg);
+        }
+
+        100% {
+            transform: translateZ(250px) rotateX(90deg) rotateZ(180deg);
+        }
+    }
 }
 
 /* === INTERACTION: scale on active === */
@@ -228,7 +260,8 @@ body {
     background: rgb(245, 235, 50);
     transition: transform 0.3s ease-in-out;
 
-    animation: letter-shake 1.5s ease-in-out infinite;
+    animation: letter-shake 1.5s ease-in-out infinite 3.5s;
+    animation-play-state: paused;
 
     @keyframes letter-shake {
         0% {
@@ -300,12 +333,13 @@ body {
         transform-origin: bottom;
     }
 
-    animation: open-top 0.3s ease-in forwards;
+    animation: open-top 0.3s ease-in forwards 0.5s;
     animation-play-state: paused;
 
     @keyframes open-top {
         to {
             transform: rotateX(0deg);
+            z-index: 1;
         }
     }
 }
@@ -335,7 +369,7 @@ body {
     z-index: 4;
     pointer-events: none;
 
-    animation: open-seal 0.3s ease-in forwards 0.3s;
+    animation: open-seal 0.3s ease-in forwards 0.2s;
     animation-play-state: paused;
 
     @keyframes open-seal {
@@ -349,19 +383,72 @@ body {
 .letter-content {
     height: 40px;
     width: 80px;
+    background: lightgoldenrodyellow;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
     position: absolute;
     top: calc(50% - 25px);
     left: calc(50% - 40px);
     rotate: -5deg;
-    background: lightgoldenrodyellow;
-    font-size: 26px;
     z-index: 2;
+    transform-style: preserve-3d;
+
+    &::before {
+        content: "👀";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: lightgoldenrodyellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        top: -100%;
+        transform-origin: bottom;
+        transform: rotateX(180deg);
+        backface-visibility: hidden;
+
+    }
+
+    animation: show-content 2s ease-in 0.8s forwards;
+    animation-play-state: paused;
+
+    @keyframes show-content {
+        5% {
+            transform: rotate(-5deg) translateY(-5%);
+        }
+
+        10% {
+            transform: rotate(0deg) translateY(-20%);
+        }
+
+        30% {
+            transform: scale(1.1) translateY(-110%);
+        }
+
+        50% {
+            transform: translateY(0px) translateZ(-900px);
+        }
+
+        70% {
+            transform: translateY(0px) translateZ(-900px);
+        }
+
+        100% {
+            transform: translateY(0px) translateZ(-900px) rotateY(180deg);
+        }
+    }
+
 }
 
 /* === CHECKED STATE === */
+.letter-input:checked {
+    pointer-events: none;
+}
+
 .letter-input:checked~.letter {
     animation-play-state: paused;
 }
@@ -371,5 +458,21 @@ body {
 }
 
 .letter-input:checked~.letter .letter-seal {
+    animation-play-state: running;
+}
+
+.letter-input:checked~.letter .letter-content {
+    animation-play-state: running;
+}
+
+.scene-input:checked~#box .side.top {
+    animation-play-state: running;
+}
+
+.scene-input:checked~#box .letter-wrapper {
+    animation-play-state: running;
+}
+
+.scene-input:checked~#box .letter-wrapper .letter {
     animation-play-state: running;
 }

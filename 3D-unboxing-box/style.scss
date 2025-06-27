@@ -72,8 +72,11 @@ body {
     // box-shadow: 0 0 5px cyan inset;
     // background: rgba(0, 255, 255, 0.1);
 
-    background: #e0ad6b;
-    box-shadow: 0 0 20px #ffcb79 inset;
+    // background: #e0ad6b;
+    background-image: url('box background.jpg');
+    background-size: 50%;
+    // filter: blur(0.3px) brightness(0.95);
+    box-shadow: 0 0 20px rgb(185, 130, 60) inset;
 }
 
 .side.top {
@@ -96,6 +99,7 @@ body {
 
 .side.right {
     // background-color: rgba(0, 255, 21, 0.6);
+    
     transform-origin: left;
     transform: translateX(150px) rotateY(-90deg);
 }
@@ -116,8 +120,13 @@ body {
     position: absolute;
     background: inherit;
 
-    box-shadow: 0 0 5px cyan inset;
-    background: rgba(0, 255, 255, 0.1);
+    // box-shadow: 0 0 5px cyan inset;
+    // background: rgba(0, 255, 255, 0.1);
+
+    background-image: url('box background.jpg');
+    background-size: 50%;
+    // filter: blur(0.3px) brightness(0.95);
+    box-shadow: 0 0 20px rgb(185, 130, 60) inset;
 }
 
 .top-side.top-left{

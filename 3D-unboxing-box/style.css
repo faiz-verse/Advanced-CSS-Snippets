@@ -58,8 +58,9 @@ body {
   height: 150px;
   width: 150px;
   position: absolute;
-  background: #e0ad6b;
-  box-shadow: 0 0 20px #ffcb79 inset;
+  background-image: url("box background.jpg");
+  background-size: 50%;
+  box-shadow: 0 0 20px rgb(185, 130, 60) inset;
 }
 
 .side.top {
@@ -95,8 +96,9 @@ body {
 .top-side {
   position: absolute;
   background: inherit;
-  box-shadow: 0 0 5px cyan inset;
-  background: rgba(0, 255, 255, 0.1);
+  background-image: url("box background.jpg");
+  background-size: 50%;
+  box-shadow: 0 0 20px rgb(185, 130, 60) inset;
 }
 
 .top-side.top-left {

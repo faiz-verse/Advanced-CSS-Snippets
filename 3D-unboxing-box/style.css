@@ -16,7 +16,6 @@ body {
 #scene {
   position: relative;
   transform-style: preserve-3d;
-  animation: auto-rotate 35s linear infinite;
 }
 @keyframes auto-rotate {
   to {
@@ -58,9 +57,8 @@ body {
   height: 150px;
   width: 150px;
   position: absolute;
-  background-image: url("box background.jpg");
-  background-size: 50%;
-  box-shadow: 0 0 20px rgb(185, 130, 60) inset;
+  background: #D8B56D;
+  box-shadow: 0 0 10px rgb(185, 155, 95) inset;
 }
 
 .side.top {
@@ -91,14 +89,16 @@ body {
 .side.front {
   transform-origin: top;
   transform: translateY(150px) rotateX(90deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .top-side {
   position: absolute;
   background: inherit;
-  background-image: url("box background.jpg");
-  background-size: 50%;
-  box-shadow: 0 0 20px rgb(185, 130, 60) inset;
+  background: #D8B56D;
+  box-shadow: 0 0 10px rgb(185, 155, 95) inset;
 }
 
 .top-side.top-left {
@@ -131,4 +131,24 @@ body {
   top: -30px;
   transform-origin: bottom;
   transform: rotateX(90deg);
+}
+
+.side.front .front-note {
+  height: 30px;
+  width: 100px;
+  background: rgb(255, 255, 150);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  transform: translateY(-10px) rotateX(180deg) rotateZ(-20deg);
+}
+
+.letter {
+  position: absolute;
+  transform: translateY(200px);
+  height: 100px;
+  width: 100px;
+  background: yellow;
 }/*# sourceMappingURL=style.css.map */

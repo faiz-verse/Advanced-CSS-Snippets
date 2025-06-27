@@ -18,7 +18,7 @@ body {
     position: relative;
     transform-style: preserve-3d;
 
-    animation: auto-rotate 35s linear infinite;
+    // animation: auto-rotate 30s linear infinite;
 
     @keyframes auto-rotate {
         to {
@@ -59,24 +59,25 @@ body {
 
     position: absolute;
     transform: translate(-50%, -50%) rotateX(90deg);
-    
+
     transform-style: preserve-3d;
 }
 
 .side {
-
     height: 150px;
     width: 150px;
     position: absolute;
-    
+
     // box-shadow: 0 0 5px cyan inset;
     // background: rgba(0, 255, 255, 0.1);
 
-    // background: #e0ad6b;
-    background-image: url('box background.jpg');
-    background-size: 50%;
-    // filter: blur(0.3px) brightness(0.95);
-    box-shadow: 0 0 20px rgb(185, 130, 60) inset;
+    // background-image: url('box background.jpg');
+    // background-size: 50%;
+    // // filter: blur(0.3px) brightness(0.95);
+    // box-shadow: 0 0 20px rgb(185, 130, 60) inset;
+
+    background: #D8B56D;
+    box-shadow: 0 0 10px rgb(185, 155, 95) inset;
 }
 
 .side.top {
@@ -99,7 +100,7 @@ body {
 
 .side.right {
     // background-color: rgba(0, 255, 21, 0.6);
-    
+
     transform-origin: left;
     transform: translateX(150px) rotateY(-90deg);
 }
@@ -114,22 +115,29 @@ body {
     // background-color: rgba(195, 0, 255, 0.6);
     transform-origin: top;
     transform: translateY(150px) rotateX(90deg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.top-side{
+.top-side {
     position: absolute;
     background: inherit;
 
     // box-shadow: 0 0 5px cyan inset;
     // background: rgba(0, 255, 255, 0.1);
 
-    background-image: url('box background.jpg');
-    background-size: 50%;
-    // filter: blur(0.3px) brightness(0.95);
-    box-shadow: 0 0 20px rgb(185, 130, 60) inset;
+    // background-image: url('box background.jpg');
+    // background-size: 50%;
+    // // filter: blur(0.3px) brightness(0.95);
+    // box-shadow: 0 0 20px rgb(185, 130, 60) inset;
+
+    background: #D8B56D;
+    box-shadow: 0 0 10px rgb(185, 155, 95) inset;
 }
 
-.top-side.top-left{
+.top-side.top-left {
     height: 100%;
     width: 30px;
     left: -30px;
@@ -137,7 +145,7 @@ body {
     transform: rotateY(-90deg);
 }
 
-.top-side.top-right{
+.top-side.top-right {
     height: 100%;
     width: 30px;
     right: -30px;
@@ -145,7 +153,7 @@ body {
     transform: rotateY(90deg);
 }
 
-.top-side.top-front{
+.top-side.top-front {
     height: 30px;
     width: 100%;
     bottom: -30px;
@@ -153,7 +161,7 @@ body {
     transform: rotateX(-90deg);
 }
 
-.top-side.top-back{
+.top-side.top-back {
     height: 30px;
     width: 100%;
     top: -30px;
@@ -161,3 +169,39 @@ body {
     transform: rotateX(90deg);
 }
 
+// .shadow {
+//   height: 150px;
+//   width: 150px;
+//   position: relative;
+
+//   background:
+//     linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 30%),
+//     linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent 30%),
+//     linear-gradient(to left, rgba(0, 0, 0, 0.3), transparent 30%),
+//     linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent 30%);
+
+//   background-blend-mode: multiply;
+//   pointer-events: none; /* optional if it's just visual */
+// }
+
+.side.front .front-note{
+    height: 30px;
+    width: 100px;
+    background: rgb(255, 255, 150);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+
+    transform: translateY(-10px) rotateX(180deg) rotateZ(-20deg);
+}
+
+.letter{
+    position: absolute;
+    transform: translateY(200px);
+
+    height: 100px;
+    width: 100px;
+    background: yellow;
+}

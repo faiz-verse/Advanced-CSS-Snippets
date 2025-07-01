@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: #111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-1 svg path {
+    fill: transparent;
+    stroke: white;
+    stroke-width: 2;
+    stroke-dasharray: 1600;
+    stroke-dashoffset: 1600;
+    animation: logo-appear 8s ease-in-out infinite;
+}
+
+@keyframes logo-appear {
+    0% {
+        stroke-dashoffset: 1600;
+    }
+
+    30% {
+        fill: transparent;
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        fill: white;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        fill: transparent;
+        stroke-dashoffset: 0;
+    }
+
+    80% {
+        stroke-dashoffset: 1600;
+    }
+
+    100% {
+        stroke-dashoffset: 1600;
+    }
+}

@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: white;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.list{
+    display: flex;
+    gap: 5px;
+
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.list::before{
+    content: 'Hover cards using + * and has to access previous childs';
+    width: 800px;
+    left: calc(50% - 400px);
+    position: absolute;
+    top: -120px;
+    font-size: 24px;
+    font-weight: 600;
+
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: red;
+}
+
+.item{
+    height: 160px;
+    width: 100px;
+    filter: brightness(0);
+    transition: all 0.5s ease-in-out;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.item:hover {
+    filter:brightness(1);
+    transform: translateZ(200px);
+}
+
+.item:hover::before{
+    content: ':hover';
+    position: absolute;
+    top: -20px;
+}
+
+.item:hover + *{
+    filter:brightness(0.75);
+    transform: translateZ(150px) rotateY(40deg);
+}
+
+.item:hover + *::before{
+    content: '+ *';
+    position: absolute;
+    top: -20px;
+}
+
+.item:hover + * + *{
+    filter:brightness(0.5);
+    transform: translateZ(70px) rotateY(20deg);
+}
+
+.item:hover + * + *::before{
+    content: '+ * + *';
+    position: absolute;
+    top: -20px;
+}
+
+.item:hover + * + * + *{
+    filter:brightness(0.2);
+    transform: translateZ(20px) rotateY(10deg);
+}
+
+.item:hover + * + * + *::before{
+    content: '+ * + * + *';
+    position: absolute;
+    top: -20px;
+}
+
+.item:has(+ *:hover){
+    filter:brightness(0.75);
+    transform: translateZ(150px) rotateY(-40deg);
+}
+
+.item:has(+ *:hover)::before{
+    content: ':has(+ *:hover)';
+    width: 120px;
+    position: absolute;
+    top: -20px;
+    font-size: 12px;
+}
+
+.item:has(+ * + *:hover){
+    filter:brightness(0.5);
+    transform: translateZ(70px) rotateY(-20deg);
+}
+
+.item:has(+ * + *:hover)::before{
+    content: ':has(+ * + *)';
+    position: absolute;
+    top: -20px;
+    font-size: 12px;
+}
+
+.item:has(+ * + * + *:hover){
+    filter:brightness(0.2);
+    transform: translateZ(20px) rotateY(-10deg);
+}
+
+.item:has(+ * + * + *:hover)::before{
+    content: '(+ * + * + *)';
+    position: absolute;
+    top: -20px;
+    font-size: 12px;
+}

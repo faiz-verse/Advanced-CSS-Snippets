@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
     color: white;
 }
 
-body{
+body {
     height: 100vh;
     width: 100vw;
     background: #222222;
@@ -21,7 +21,7 @@ img {
     object-position: center;
 }
 
-.list{
+.list {
     display: flex;
     gap: 5px;
 
@@ -29,7 +29,7 @@ img {
     transform-style: preserve-3d;
 }
 
-.list::before{
+.list::before {
     content: 'Hover cards using + * and has to access previous childs';
     width: 800px;
     left: calc(50% - 400px);
@@ -43,7 +43,7 @@ img {
     text-decoration-color: red;
 }
 
-.item{
+.item {
     height: 160px;
     width: 100px;
     filter: brightness(0);
@@ -55,55 +55,55 @@ img {
 }
 
 .item:hover {
-    filter:brightness(1);
+    filter: brightness(1);
     transform: translateZ(200px);
 }
 
-.item:hover::before{
+.item:hover::before {
     content: ':hover';
     position: absolute;
     top: -20px;
 }
 
-.item:hover + *{
-    filter:brightness(0.75);
+.item:hover+* {
+    filter: brightness(0.75);
     transform: translateZ(150px) rotateY(40deg);
 }
 
-.item:hover + *::before{
+.item:hover+*::before {
     content: '+ *';
     position: absolute;
     top: -20px;
 }
 
-.item:hover + * + *{
-    filter:brightness(0.5);
+.item:hover+*+* {
+    filter: brightness(0.5);
     transform: translateZ(70px) rotateY(20deg);
 }
 
-.item:hover + * + *::before{
+.item:hover+*+*::before {
     content: '+ * + *';
     position: absolute;
     top: -20px;
 }
 
-.item:hover + * + * + *{
-    filter:brightness(0.2);
+.item:hover+*+*+* {
+    filter: brightness(0.2);
     transform: translateZ(20px) rotateY(10deg);
 }
 
-.item:hover + * + * + *::before{
+.item:hover+*+*+*::before {
     content: '+ * + * + *';
     position: absolute;
     top: -20px;
 }
 
-.item:has(+ *:hover){
-    filter:brightness(0.75);
+.item:has(+ *:hover) {
+    filter: brightness(0.75);
     transform: translateZ(150px) rotateY(-40deg);
 }
 
-.item:has(+ *:hover)::before{
+.item:has(+ *:hover)::before {
     content: ':has(+ *:hover)';
     width: 120px;
     position: absolute;
@@ -111,24 +111,24 @@ img {
     font-size: 12px;
 }
 
-.item:has(+ * + *:hover){
-    filter:brightness(0.5);
+.item:has(+ * + *:hover) {
+    filter: brightness(0.5);
     transform: translateZ(70px) rotateY(-20deg);
 }
 
-.item:has(+ * + *:hover)::before{
+.item:has(+ * + *:hover)::before {
     content: ':has(+ * + *)';
     position: absolute;
     top: -20px;
     font-size: 12px;
 }
 
-.item:has(+ * + * + *:hover){
-    filter:brightness(0.2);
+.item:has(+ * + * + *:hover) {
+    filter: brightness(0.2);
     transform: translateZ(20px) rotateY(-10deg);
 }
 
-.item:has(+ * + * + *:hover)::before{
+.item:has(+ * + * + *:hover)::before {
     content: '(+ * + * + *)';
     position: absolute;
     top: -20px;

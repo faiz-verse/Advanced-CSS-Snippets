@@ -13,6 +13,27 @@ body {
     justify-content: center;
 }
 
+.loaders {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.loader {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .loader-1 svg path {
     fill: transparent;
     stroke: white;

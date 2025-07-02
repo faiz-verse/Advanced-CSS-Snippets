@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-scene {
+    height: 200px;
+    width: 200px;
+    background-image: url('https://as1.ftcdn.net/v2/jpg/02/04/44/86/1000_F_204448635_HshsjFsWM52BYHJf2jvuz3wznKcwNtKU.jpg');
+    background-position: 0px 0px;
+    background-size: 1700px;
+    mix-blend-mode: darken;
+    animation: move-img 1s steps(7) infinite, move 10s linear infinite;
+    position: absolute;
+    bottom: -5px;
+    left: -200px;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes move-img {
+    from {
+        background-position: 0px 0px;
+    }
+
+    to {
+        background-position: 100% 0px;
+    }
+}
+
+@keyframes move {
+    to {
+        left: calc(100% + 200px);
+    }
+}
+
+h2 {
+    width: 100vw;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: 600;
+    position: fixed;
+    top: 50px;
+}

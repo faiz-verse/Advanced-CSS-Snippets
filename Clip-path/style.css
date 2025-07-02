@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+}
+
+:root {
+    color-scheme: light dark;
+    --color-scheme: light-dark(white, #222)
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(transparent 30%, var(--color-scheme)), linear-gradient(to right, #ccc 1px, transparent 1px), linear-gradient(to bottom, #ccc 1px, transparent 1px);
+    background-size: 100%, 50px 50px, 50px 50px;
+    background-position: 0 0;
+
+    animation: move-bg 60s linear infinite;
+}
+
+@keyframes move-bg {
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+.clip-path-object {
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(to top right, hotpink, purple);
+    /* box shadow does not work for the clip path */
+    box-shadow: 0 0 20px hotpink;
+
+    /* L for line between points args X,Y */
+    /* A for arc i.e. curves args RX,RY x-axis-rotation, large-arc-flag, sweep-flag*/
+    clip-path: path('M 20,100 L 180,100 A 20,20 0,0,0 200,80 L 200,20 A 20,20 0,0,1 220,0 L 380,0 A 20,20 0,0,1 400,20 L 400,380 A 20,20 0,0,1 380,400 L 20,400 A 20,20 0,0,1 0,380 L 0,120 A 20,20 0,0,1 20,100 Z');
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clip-path-object::before {
+    content: "height: 400px; width: 400px; clip-path: path(' M 20,100 L 180,100 A 20,20 0,0,0 200,80 L 200,20 A 20,20 0,0,1 220,0 L 380,0 A 20,20 0,0,1 400,20 L 400,380 A 20,20 0,0,1 380,400 L 20,400 A 20,20 0,0,1 0,380 L 0,120 A 20,20 0,0,1 20,100 Z')";
+    position: absolute;
+    width: 80%;
+    font-family: 'Courier New', Courier, monospace;
+    top: 120px;
+    line-height: 1.8;
+}

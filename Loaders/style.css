@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
 }
@@ -69,5 +71,81 @@ body {
 
     100% {
         stroke-dashoffset: 1600;
+    }
+}
+
+.circular-loader-text {
+    height: 100px;
+    width: 100px;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+
+    animation: auto-rotate 20s linear infinite;
+}
+
+@keyframes auto-rotate {
+    to {
+        rotate: 360deg;
+    }
+}
+
+.loader-2 span {
+    /* width: 20px; */
+
+    position: absolute;
+    top: 0;
+    left: 50px;
+    z-index: calc(var(--i) * -1);
+
+    opacity: 0;
+
+    /* transform: rotate(calc(var(--i) * 25deg)); */
+    transform-origin: 0 50px;
+    font-size: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    animation: expand-words calc(18 * 0.4s) ease-in-out infinite calc(var(--i) * 0.4s);
+}
+
+@keyframes expand-words {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.3;
+    }
+
+    20% {
+        opacity: 1;
+        transform: rotate(calc(var(--i) * 20deg));
+    }
+
+    /* break for few secs */
+
+    80% {
+        opacity: 1;
+        transform: rotate(calc(var(--i) * 20deg));
+    }
+
+    85% {
+        opacity: 0.3;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(calc(var(--i) * 30deg));
     }
 }

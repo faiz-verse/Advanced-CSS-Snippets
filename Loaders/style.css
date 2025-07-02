@@ -36,13 +36,14 @@ body {
     border-radius: 10px;
 }
 
+/* LOADER 1 */
 .loader-1 svg path {
     fill: transparent;
     stroke: white;
     stroke-width: 2;
     stroke-dasharray: 1600;
     stroke-dashoffset: 1600;
-    animation: logo-appear 8s ease-in-out infinite;
+    animation: logo-appear 15s ease-in-out infinite;
 }
 
 @keyframes logo-appear {
@@ -50,17 +51,21 @@ body {
         stroke-dashoffset: 1600;
     }
 
-    30% {
+    20% {
         fill: transparent;
         stroke-dashoffset: 0;
     }
 
-    40% {
+    30% {
         fill: white;
         stroke-dashoffset: 0;
     }
 
     50% {
+        fill: white;
+    }
+
+    60% {
         fill: transparent;
         stroke-dashoffset: 0;
     }
@@ -74,6 +79,8 @@ body {
     }
 }
 
+
+/* LOADER 2 */
 .circular-loader-text {
     height: 100px;
     width: 100px;

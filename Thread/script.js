@@ -1,11 +1,10 @@
 const threads = document.querySelectorAll(".thread");
-const mousePosition = document.querySelector(".mouse-position");
+
+const bulb = document.querySelector(".bulb-wrapper");
 
 document.addEventListener("mousemove", (e) => {
-  mousePosition.innerHTML = `X: ${e.clientX} Y: ${e.clientY}`;
-
+  bulb.style.left = `${e.movementX / 10}px`;
   threads.forEach((thread, index) => {
-    thread.style.background = "red";
-    thread.style.left = `${e.movementX}px`;
+    thread.style.left = `${e.movementX / 10}px`;
   });
 });

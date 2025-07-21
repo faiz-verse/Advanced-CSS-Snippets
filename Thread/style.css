@@ -29,7 +29,7 @@ body {
 .thread {
   height: 3px;
   width: 3px;
-  background: white;
+  background: black;
   position: relative;
 }
 
@@ -433,14 +433,11 @@ body {
   transition: all 0.1s ease-in-out -0.05s;
 }
 
-.mouse-position {
-  color: white;
-}
-
 .bulb-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .bulb-bottom {

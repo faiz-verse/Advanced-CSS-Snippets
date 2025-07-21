@@ -7,6 +7,23 @@ body {
   width: 100vw;
   overflow: hidden;
   background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thread-wrapper {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  left: 50vw;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  align-items: center;
 }
 
 .thread {
@@ -14,5 +31,426 @@ body {
   width: 3px;
   background: white;
   position: relative;
-  left: 50vw;
+}
+
+.thread:nth-child(1n+1) {
+  transition: all 0.1s ease-in-out -0.0005s;
+}
+
+.thread:nth-child(1n+2) {
+  transition: all 0.1s ease-in-out -0.001s;
+}
+
+.thread:nth-child(1n+3) {
+  transition: all 0.1s ease-in-out -0.0015s;
+}
+
+.thread:nth-child(1n+4) {
+  transition: all 0.1s ease-in-out -0.002s;
+}
+
+.thread:nth-child(1n+5) {
+  transition: all 0.1s ease-in-out -0.0025s;
+}
+
+.thread:nth-child(1n+6) {
+  transition: all 0.1s ease-in-out -0.003s;
+}
+
+.thread:nth-child(1n+7) {
+  transition: all 0.1s ease-in-out -0.0035s;
+}
+
+.thread:nth-child(1n+8) {
+  transition: all 0.1s ease-in-out -0.004s;
+}
+
+.thread:nth-child(1n+9) {
+  transition: all 0.1s ease-in-out -0.0045s;
+}
+
+.thread:nth-child(1n+10) {
+  transition: all 0.1s ease-in-out -0.005s;
+}
+
+.thread:nth-child(1n+11) {
+  transition: all 0.1s ease-in-out -0.0055s;
+}
+
+.thread:nth-child(1n+12) {
+  transition: all 0.1s ease-in-out -0.006s;
+}
+
+.thread:nth-child(1n+13) {
+  transition: all 0.1s ease-in-out -0.0065s;
+}
+
+.thread:nth-child(1n+14) {
+  transition: all 0.1s ease-in-out -0.007s;
+}
+
+.thread:nth-child(1n+15) {
+  transition: all 0.1s ease-in-out -0.0075s;
+}
+
+.thread:nth-child(1n+16) {
+  transition: all 0.1s ease-in-out -0.008s;
+}
+
+.thread:nth-child(1n+17) {
+  transition: all 0.1s ease-in-out -0.0085s;
+}
+
+.thread:nth-child(1n+18) {
+  transition: all 0.1s ease-in-out -0.009s;
+}
+
+.thread:nth-child(1n+19) {
+  transition: all 0.1s ease-in-out -0.0095s;
+}
+
+.thread:nth-child(1n+20) {
+  transition: all 0.1s ease-in-out -0.01s;
+}
+
+.thread:nth-child(1n+21) {
+  transition: all 0.1s ease-in-out -0.0105s;
+}
+
+.thread:nth-child(1n+22) {
+  transition: all 0.1s ease-in-out -0.011s;
+}
+
+.thread:nth-child(1n+23) {
+  transition: all 0.1s ease-in-out -0.0115s;
+}
+
+.thread:nth-child(1n+24) {
+  transition: all 0.1s ease-in-out -0.012s;
+}
+
+.thread:nth-child(1n+25) {
+  transition: all 0.1s ease-in-out -0.0125s;
+}
+
+.thread:nth-child(1n+26) {
+  transition: all 0.1s ease-in-out -0.013s;
+}
+
+.thread:nth-child(1n+27) {
+  transition: all 0.1s ease-in-out -0.0135s;
+}
+
+.thread:nth-child(1n+28) {
+  transition: all 0.1s ease-in-out -0.014s;
+}
+
+.thread:nth-child(1n+29) {
+  transition: all 0.1s ease-in-out -0.0145s;
+}
+
+.thread:nth-child(1n+30) {
+  transition: all 0.1s ease-in-out -0.015s;
+}
+
+.thread:nth-child(1n+31) {
+  transition: all 0.1s ease-in-out -0.0155s;
+}
+
+.thread:nth-child(1n+32) {
+  transition: all 0.1s ease-in-out -0.016s;
+}
+
+.thread:nth-child(1n+33) {
+  transition: all 0.1s ease-in-out -0.0165s;
+}
+
+.thread:nth-child(1n+34) {
+  transition: all 0.1s ease-in-out -0.017s;
+}
+
+.thread:nth-child(1n+35) {
+  transition: all 0.1s ease-in-out -0.0175s;
+}
+
+.thread:nth-child(1n+36) {
+  transition: all 0.1s ease-in-out -0.018s;
+}
+
+.thread:nth-child(1n+37) {
+  transition: all 0.1s ease-in-out -0.0185s;
+}
+
+.thread:nth-child(1n+38) {
+  transition: all 0.1s ease-in-out -0.019s;
+}
+
+.thread:nth-child(1n+39) {
+  transition: all 0.1s ease-in-out -0.0195s;
+}
+
+.thread:nth-child(1n+40) {
+  transition: all 0.1s ease-in-out -0.02s;
+}
+
+.thread:nth-child(1n+41) {
+  transition: all 0.1s ease-in-out -0.0205s;
+}
+
+.thread:nth-child(1n+42) {
+  transition: all 0.1s ease-in-out -0.021s;
+}
+
+.thread:nth-child(1n+43) {
+  transition: all 0.1s ease-in-out -0.0215s;
+}
+
+.thread:nth-child(1n+44) {
+  transition: all 0.1s ease-in-out -0.022s;
+}
+
+.thread:nth-child(1n+45) {
+  transition: all 0.1s ease-in-out -0.0225s;
+}
+
+.thread:nth-child(1n+46) {
+  transition: all 0.1s ease-in-out -0.023s;
+}
+
+.thread:nth-child(1n+47) {
+  transition: all 0.1s ease-in-out -0.0235s;
+}
+
+.thread:nth-child(1n+48) {
+  transition: all 0.1s ease-in-out -0.024s;
+}
+
+.thread:nth-child(1n+49) {
+  transition: all 0.1s ease-in-out -0.0245s;
+}
+
+.thread:nth-child(1n+50) {
+  transition: all 0.1s ease-in-out -0.025s;
+}
+
+.thread:nth-child(1n+51) {
+  transition: all 0.1s ease-in-out -0.0255s;
+}
+
+.thread:nth-child(1n+52) {
+  transition: all 0.1s ease-in-out -0.026s;
+}
+
+.thread:nth-child(1n+53) {
+  transition: all 0.1s ease-in-out -0.0265s;
+}
+
+.thread:nth-child(1n+54) {
+  transition: all 0.1s ease-in-out -0.027s;
+}
+
+.thread:nth-child(1n+55) {
+  transition: all 0.1s ease-in-out -0.0275s;
+}
+
+.thread:nth-child(1n+56) {
+  transition: all 0.1s ease-in-out -0.028s;
+}
+
+.thread:nth-child(1n+57) {
+  transition: all 0.1s ease-in-out -0.0285s;
+}
+
+.thread:nth-child(1n+58) {
+  transition: all 0.1s ease-in-out -0.029s;
+}
+
+.thread:nth-child(1n+59) {
+  transition: all 0.1s ease-in-out -0.0295s;
+}
+
+.thread:nth-child(1n+60) {
+  transition: all 0.1s ease-in-out -0.03s;
+}
+
+.thread:nth-child(1n+61) {
+  transition: all 0.1s ease-in-out -0.0305s;
+}
+
+.thread:nth-child(1n+62) {
+  transition: all 0.1s ease-in-out -0.031s;
+}
+
+.thread:nth-child(1n+63) {
+  transition: all 0.1s ease-in-out -0.0315s;
+}
+
+.thread:nth-child(1n+64) {
+  transition: all 0.1s ease-in-out -0.032s;
+}
+
+.thread:nth-child(1n+65) {
+  transition: all 0.1s ease-in-out -0.0325s;
+}
+
+.thread:nth-child(1n+66) {
+  transition: all 0.1s ease-in-out -0.033s;
+}
+
+.thread:nth-child(1n+67) {
+  transition: all 0.1s ease-in-out -0.0335s;
+}
+
+.thread:nth-child(1n+68) {
+  transition: all 0.1s ease-in-out -0.034s;
+}
+
+.thread:nth-child(1n+69) {
+  transition: all 0.1s ease-in-out -0.0345s;
+}
+
+.thread:nth-child(1n+70) {
+  transition: all 0.1s ease-in-out -0.035s;
+}
+
+.thread:nth-child(1n+71) {
+  transition: all 0.1s ease-in-out -0.0355s;
+}
+
+.thread:nth-child(1n+72) {
+  transition: all 0.1s ease-in-out -0.036s;
+}
+
+.thread:nth-child(1n+73) {
+  transition: all 0.1s ease-in-out -0.0365s;
+}
+
+.thread:nth-child(1n+74) {
+  transition: all 0.1s ease-in-out -0.037s;
+}
+
+.thread:nth-child(1n+75) {
+  transition: all 0.1s ease-in-out -0.0375s;
+}
+
+.thread:nth-child(1n+76) {
+  transition: all 0.1s ease-in-out -0.038s;
+}
+
+.thread:nth-child(1n+77) {
+  transition: all 0.1s ease-in-out -0.0385s;
+}
+
+.thread:nth-child(1n+78) {
+  transition: all 0.1s ease-in-out -0.039s;
+}
+
+.thread:nth-child(1n+79) {
+  transition: all 0.1s ease-in-out -0.0395s;
+}
+
+.thread:nth-child(1n+80) {
+  transition: all 0.1s ease-in-out -0.04s;
+}
+
+.thread:nth-child(1n+81) {
+  transition: all 0.1s ease-in-out -0.0405s;
+}
+
+.thread:nth-child(1n+82) {
+  transition: all 0.1s ease-in-out -0.041s;
+}
+
+.thread:nth-child(1n+83) {
+  transition: all 0.1s ease-in-out -0.0415s;
+}
+
+.thread:nth-child(1n+84) {
+  transition: all 0.1s ease-in-out -0.042s;
+}
+
+.thread:nth-child(1n+85) {
+  transition: all 0.1s ease-in-out -0.0425s;
+}
+
+.thread:nth-child(1n+86) {
+  transition: all 0.1s ease-in-out -0.043s;
+}
+
+.thread:nth-child(1n+87) {
+  transition: all 0.1s ease-in-out -0.0435s;
+}
+
+.thread:nth-child(1n+88) {
+  transition: all 0.1s ease-in-out -0.044s;
+}
+
+.thread:nth-child(1n+89) {
+  transition: all 0.1s ease-in-out -0.0445s;
+}
+
+.thread:nth-child(1n+90) {
+  transition: all 0.1s ease-in-out -0.045s;
+}
+
+.thread:nth-child(1n+91) {
+  transition: all 0.1s ease-in-out -0.0455s;
+}
+
+.thread:nth-child(1n+92) {
+  transition: all 0.1s ease-in-out -0.046s;
+}
+
+.thread:nth-child(1n+93) {
+  transition: all 0.1s ease-in-out -0.0465s;
+}
+
+.thread:nth-child(1n+94) {
+  transition: all 0.1s ease-in-out -0.047s;
+}
+
+.thread:nth-child(1n+95) {
+  transition: all 0.1s ease-in-out -0.0475s;
+}
+
+.thread:nth-child(1n+96) {
+  transition: all 0.1s ease-in-out -0.048s;
+}
+
+.thread:nth-child(1n+97) {
+  transition: all 0.1s ease-in-out -0.0485s;
+}
+
+.thread:nth-child(1n+98) {
+  transition: all 0.1s ease-in-out -0.049s;
+}
+
+.thread:nth-child(1n+99) {
+  transition: all 0.1s ease-in-out -0.0495s;
+}
+
+.thread:nth-child(1n+100) {
+  transition: all 0.1s ease-in-out -0.05s;
+}
+
+.mouse-position {
+  color: white;
+}
+
+.bulb-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bulb-bottom {
+  height: 35px;
+  width: 30px;
+  border-radius: 10px 10px 0px 0px;
+  background: black;
+}
+
+.bulb-top {
+  height: 70px;
+  width: 70px;
 }/*# sourceMappingURL=style.css.map */

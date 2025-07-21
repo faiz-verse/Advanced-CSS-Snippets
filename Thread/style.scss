@@ -7,13 +7,55 @@ body {
     width: 100vw;
     overflow: hidden;
     background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thread-wrapper {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    left: 50vw;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    align-items: center;
 }
 
 .thread {
     height: 3px;
     width: 3px;
     background: white;
-
     position: relative;
-    left: 50vw;
+}
+
+@for $i from 1 through 100 {
+    .thread:nth-child(1n + #{$i}) {
+        // top: #{$i * 3}px;
+        transition: all 0.1s ease-in-out -#{$i * 0.0005}s;
+    }
+}
+
+.mouse-position {
+    color: white;
+}
+
+.bulb-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bulb-bottom {
+    height: 35px;
+    width: 30px;
+    border-radius: 10px 10px 0px 0px;
+    background: black;
+}
+
+.bulb-top {
+    height: 70px;
+    width: 70px;
 }

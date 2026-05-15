@@ -398,7 +398,7 @@ body {
 }
 @media (max-width: 768px) {
   :root {
-    --z-depth: -700px;
+    --z-depth: -750px;
   }
 }
 
@@ -428,7 +428,7 @@ body {
   width: 60%;
   margin-left: 3%;
   background: red;
-  background-image: url("gorilla middle finger meme.jpg");
+  background-image: url("me and her.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

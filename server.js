@@ -46,7 +46,7 @@ const myServer = http.createServer((req, res) => {
         let decodedURL = decodeURIComponent(req.url)
         console.log(`Request URL: ${decodedURL}`);
 
-        let filePath = path.join(__dirname, `../`, decodedURL)
+        let filePath = path.join(__dirname, decodedURL) 
         console.log(filePath)
 
         let contentType = getContentType(filePath)
